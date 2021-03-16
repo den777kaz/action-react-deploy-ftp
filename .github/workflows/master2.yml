@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [master]
+    branches: [dev]
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -21,10 +21,9 @@ jobs:
           npm run build
 
       - name: 📂 Sync files
-        uses: sand4rt/ftp-deployer@v1.1
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          host: ftp.hostde30.fornex.host
+          local-dir: ./build/
+          server: ftp.hostde30.fornex.host
           username: denis@den-kaz.com
           password: ${{ secrets.password }}
-          local_folder: build
-           cleanup: true
