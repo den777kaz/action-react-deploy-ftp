@@ -27,4 +27,3 @@ jobs:
           username: denis@den-kaz.com
           password: ${{ secrets.password }}
           local_folder: build
-           cleanup: true
