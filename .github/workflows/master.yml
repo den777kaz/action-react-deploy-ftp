@@ -20,7 +20,7 @@ jobs:
           npm install
           npm run build
 
-      - name: Simple FTP deploy
+      - name: 📂 Sync files
         uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
         with:
           ftp_host: ftp.hostde30.fornex.host
